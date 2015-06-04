@@ -6,7 +6,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '4.0.3'
 gem 'turbolinks', '2.5.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'rails-i18n', '~> 4.0.0'
 
 
 group :development, :test do
@@ -15,5 +15,6 @@ group :development, :test do
   	gem 'factory_girl_rails', '4.4.1'
   	gem 'rspec-rails', '~> 3.0'
   	gem 'capybara-webkit', '1.5.1'
+  	
 end
 
