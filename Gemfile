@@ -14,6 +14,6 @@ group :development, :test do
   	gem 'web-console', '~> 2.0'
   	gem 'factory_girl_rails', '4.4.1'
   	gem 'rspec-rails', '~> 3.0'
-  	gem 'capybara-webkit'
+  	gem 'capybara-webkit', '1.5.1'
 end
 
