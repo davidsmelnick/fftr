@@ -12,6 +12,6 @@ feature "Festival Listing" do
 
   	festivals.each do |festival|
   	  expect(page).to have_content festival.name
-  	end  
+  	end
   end
 end
