@@ -12,7 +12,7 @@ gem "haml-rails", "~> 0.9"
 group :development, :test do
 	gem 'sqlite3', '1.3.10'
   	gem 'web-console', '~> 2.0'
-  	gem 'factory_girl_rails', '4.4.1'
+  	gem 'factory_girl_rails', '4.4.1'#, :require => false
   	gem 'rspec-rails', '~> 3.0'
   	gem 'capybara-webkit', '1.5.1'
   	
