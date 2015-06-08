@@ -18,10 +18,8 @@ feature "Festival Listing" do
   scenario "visits festival page" do
     festival = FactoryGirl.create(:festival)
 
-    visit festival_path(festival)
+    visit 'festivals/' + festival[:name]
 
-    festivals.each do |festival|
-      expect(page).to have_content festival.name
-    end
+    expect(page).to have_content festival[:name]
   end
 end

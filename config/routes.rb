@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'festivals/index'
+  get '/festivals/:name', to: 'festivals#show'
+  
   get 'artists/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
