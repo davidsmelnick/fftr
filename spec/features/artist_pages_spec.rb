@@ -1,10 +1,16 @@
 feature "Artist Listing" do
+  scenario "Visits the artists page" do
+    visit 'artists/index'
+
+    expect(page).to have_title(I18n.t("home_page.site_name"))
+  end
+  
   scenario "sees multiple artists on the page" do
-  	festivals = FactoryGirl.create_list(:artist, 3)
+  	artists = FactoryGirl.create_list(:artist, 3)
 
-  	visit root_path
+  	visit 'artists/index'
 
-  	artist.each do |artist|
+  	artists.each do |artist|
   	  expect(page).to have_content artist.name
   	end
   end
