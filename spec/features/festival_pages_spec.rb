@@ -6,7 +6,7 @@ feature "Festival Listing" do
   end
 
   scenario "sees multiple festivals on the page" do
-  	festivals = create_list(:festival, 3)
+  	festivals = FactoryGirl.create_list(:festival, 3)
 
   	visit root_path
 
