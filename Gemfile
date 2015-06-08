@@ -9,8 +9,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-i18n', '~> 4.0.0'
 gem "haml-rails", "~> 0.9"
 gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem "less-rails", "2.7.0" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails", "3.2.0"
 
 group :development, :test do
 	gem 'sqlite3', '1.3.10'
