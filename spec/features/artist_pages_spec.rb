@@ -18,7 +18,7 @@ feature "Artist Listing" do
   scenario "visits artist page" do
     artist = FactoryGirl.create(:artist)
 
-    visit 'artists/' + artist[:name]
+    visit artist_path(artist)
 
     expect(page).to have_content artist[:name]
   end  
@@ -26,7 +26,7 @@ feature "Artist Listing" do
   scenario "artist has shows" do
     show = FactoryGirl.create(:show)
 
-    visit 'artists/' + show.artist[:name]
+    visit artist_path(show.artist)
 
     expect(page).to have_content show.festival[:name]
   end

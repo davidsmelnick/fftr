@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/festivals/:name', to: 'festivals#show'
   
   get 'artists/index'
-  get '/artists/:name', to: 'artists#show'
+  # get '/artists/:name', to: 'artists#show'
+  resources :artists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

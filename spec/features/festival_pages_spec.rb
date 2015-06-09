@@ -30,4 +30,12 @@ feature "Festival Listing" do
 
     expect(page).to have_content show.artist[:name]
   end
+
+  scenario "artist pages clickable" do
+    show = FactoryGirl.create(:show)
+
+    visit 'festivals/' + show.festival[:name]
+
+    expect(page).to have_link(show.artist.name,artist_path(show.artist))
+  end
 end

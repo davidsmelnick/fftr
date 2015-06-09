@@ -3,8 +3,8 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
   def show
-    name = params[:name]
-    @artist = Artist.find_by(:name => name)
+    id = params[:id]
+    @artist = Artist.find(id)
     @shows = @artist.shows
   end
 end
