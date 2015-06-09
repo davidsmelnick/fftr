@@ -5,21 +5,29 @@ feature "Festival Listing" do
     expect(page).to have_title(I18n.t("home_page.site_name"))
   end
 
-  # scenario "sees multiple festivals on the page" do
-  # 	festivals = FactoryGirl.create_list(:festival, 3)
+  scenario "sees multiple festivals on the page" do
+  	festivals = FactoryGirl.create_list(:festival, 3)
 
-  # 	visit root_path
+  	visit root_path
 
-  # 	festivals.each do |festival|
-  # 	  expect(page).to have_content festival.name
-  # 	end
-  # end
+  	festivals.each do |festival|
+  	  expect(page).to have_content festival.name
+  	end
+  end
 
-  # scenario "visits festival page" do
-  #   festival = FactoryGirl.create(:festival)
+  scenario "visits festival page" do
+    festival = FactoryGirl.create(:festival)
 
-  #   visit 'festivals/' + festival[:name]
+    visit 'festivals/' + festival[:name]
 
-  #   expect(page).to have_content festival[:name]
-  # end
+    expect(page).to have_content festival[:name]
+  end
+
+  scenario "festival has shows" do
+    show = FactoryGirl.create(:show)
+
+    visit 'festivals/' + show.festival[:name]
+
+    expect(page).to have_content show.artist[:name]
+  end
 end

@@ -5,5 +5,6 @@ class FestivalsController < ApplicationController
   def show
     name = params[:name]
     @festival = Festival.find_by(:name => name)
+    @shows = @festival.shows
   end
 end
