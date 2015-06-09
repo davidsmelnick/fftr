@@ -18,7 +18,7 @@ feature "Festival Listing" do
   scenario "visits festival page" do
     festival = FactoryGirl.create(:festival)
 
-    visit 'festivals/' + festival[:name]
+    visit festival_path(festival)
 
     expect(page).to have_content festival[:name]
   end
@@ -26,7 +26,7 @@ feature "Festival Listing" do
   scenario "festival has shows" do
     show = FactoryGirl.create(:show)
 
-    visit 'festivals/' + show.festival[:name]
+    visit festival_path(show.festival)
 
     expect(page).to have_content show.artist[:name]
   end
@@ -34,7 +34,7 @@ feature "Festival Listing" do
   scenario "artist pages clickable" do
     show = FactoryGirl.create(:show)
 
-    visit 'festivals/' + show.festival[:name]
+    visit festival_path(show.festival)
 
     expect(page).to have_link(show.artist.name,artist_path(show.artist))
   end

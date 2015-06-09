@@ -1,3 +1,4 @@
 %h1= @artist.name
 - @shows.each do |i|
-  %td= i.festival.name
+  %li
+    = link_to i.festival.name,festival_path(i.festival)

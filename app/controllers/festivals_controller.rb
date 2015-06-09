@@ -3,8 +3,8 @@ class FestivalsController < ApplicationController
     @festivals = Festival.all
   end
   def show
-    name = params[:name]
-    @festival = Festival.find_by(:name => name)
+    id = params[:id]
+    @festival = Festival.find(id)
     @shows = @festival.shows
   end
 end

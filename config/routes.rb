@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'festivals/index'
-  get '/festivals/:name', to: 'festivals#show'
+  # get '/festivals/:name', to: 'festivals#show'
+  resources :festivals
   
   get 'artists/index'
   # get '/artists/:name', to: 'artists#show'
