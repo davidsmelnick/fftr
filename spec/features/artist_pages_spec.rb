@@ -23,4 +23,12 @@ feature "Artist Listing" do
     expect(page).to have_content artist[:name]
   end  
 
+  scenario "has shows" do
+    show = FactoryGirl.create(:show)
+
+    visit 'artists/' + show.artist[:name]
+
+    expect(page).to have_content show.festival[:name]
+  end  
+
 end

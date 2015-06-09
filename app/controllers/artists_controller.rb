@@ -5,5 +5,6 @@ class ArtistsController < ApplicationController
   def show
     name = params[:name]
     @artist = Artist.find_by(:name => name)
+    @shows = @artist.shows
   end
 end

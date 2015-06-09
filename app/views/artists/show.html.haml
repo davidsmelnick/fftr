@@ -1,2 +1,4 @@
 %h1 Artists#show
 %ul= @artist.name
+- @shows.each do |i|
+  %td= i.festival.name
