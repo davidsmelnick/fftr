@@ -6,9 +6,8 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    // = image_tag("fftr_logo_main.png")
   %body
-    %nav.navbar.navbar-inverse.navbar-fixed-top
+    %nav.navbar.navbar-inverse.navbar-static-top
       .container
         .navbar-header
           %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
@@ -16,11 +15,11 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"}
+          %a.navbar-brand
           %ul.nav.navbar-nav
-            %li
-              = link_to image_tag("fftr_logo_main.png"), root_url
             %li.active
+              =link_to image_tag("fftr_logo_main.png"), root_url
+            %li
               =link_to "Home", root_url
             %li
               %a{:href => "#about"} About
